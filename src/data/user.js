@@ -3,7 +3,7 @@ const INFO = {
 		title: "Portfolio - Daniel Prince D",
 		name: "Daniel Prince D",
 		email: "d.danielprince2003@gmail.com",
-		logo: "../logo.png",
+		logo: "https://avatars.githubusercontent.com/u/126276625?v=4",
 	},
 
 	socials: {
