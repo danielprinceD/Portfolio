@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { Helmet } from "react-helmet";
+import "../data/user";
 
 import { faMailBulk } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -23,6 +24,7 @@ import SEO from "../data/seo";
 import myArticles from "../data/articles";
 
 import "./styles/homepage.css";
+import Progress from "./Progress";
 
 const Homepage = () => {
 	const [stayLogo, setStayLogo] = useState(false);
@@ -113,7 +115,7 @@ const Homepage = () => {
 							</div>
 						</div>
 						<div>
-							<a href="https://drive.google.com/file/d/19Lbp0vk10WFQtMXs1gj8jz1WioO_FVEg/view">
+							<a href="https://drive.google.com/file/d/1i-FZ9EfnBIyz8qAUGG0y_LvovWWrqnC1/view?usp=sharing">
 								<button class="button-17" role="button">
 									Download Resume
 								</button>
@@ -177,6 +179,44 @@ const Homepage = () => {
 									width="40"
 								/>
 							</a>
+						</div>
+
+						<div className="homepage-container">
+							<div
+								className="title homepage-title"
+								style={{
+									marginTop: "20px",
+									marginBottom: "20px",
+								}}
+							>
+								My Skills
+							</div>
+							<div
+								style={{
+									display: "flex",
+									justifyContent: "space-around",
+									flexWrap: "wrap",
+								}}
+							>
+								<span>
+									<h2>Technical Skills</h2>
+									{INFO.skills.map((e) => (
+										<>
+											<h4>{e.language}</h4>
+											<Progress done={e.percentage} />
+										</>
+									))}
+								</span>
+								<span>
+									<h2>Non-Technical Skills</h2>
+									{INFO.nonTech.map((e) => (
+										<>
+											<h4>{e.name}</h4>
+											<Progress done={e.rank} />
+										</>
+									))}
+								</span>
+							</div>
 						</div>
 
 						<div className="homepage-projects">

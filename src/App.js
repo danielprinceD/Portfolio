@@ -12,6 +12,7 @@ import Notfound from "./pages/404";
 
 import { TRACKING_ID } from "./data/tracking";
 import "./app.css";
+import Certificates from "./pages/Certificates";
 
 function App() {
 	useEffect(() => {
@@ -27,6 +28,10 @@ function App() {
 				<Route path="/Portfolio/about" element={<About />} />
 				<Route path="/Portfolio/projects" element={<Projects />} />
 				<Route path="/Portfolio/contact" element={<Contact />} />
+				<Route
+					path="/Portfolio/certificates"
+					element={<Certificates />}
+				/>
 				<Route path="*" element={<Notfound />} />
 			</Routes>
 		</div>
